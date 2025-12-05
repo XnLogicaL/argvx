@@ -1,8 +1,8 @@
 # argvx
 
 > [!WARNING]
-> This project currently features a very minimal implementation.
-> It is planned to be expanded with significantly more features.
+> This project currently features a minimal implementation.
+> It is planned to be expanded in the future.
 
 argvx (argv eXtended) is a feature-rich, exception-free argument parser for modern C++
 
