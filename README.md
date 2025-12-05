@@ -1,14 +1,13 @@
 # argvx
 
 > [!WARNING]
-> This project currently features a minimal implementation.
-> It is planned to be expanded in the future.
+> This project is still in its early stages.
+> The foundation is solid, but more features are planned.
 
-argvx (argv eXtended) is a feature-rich, exception-free argument parser for modern C++
+argvx (argv eXtended) is a modern, exception-free, header-only argument parser for C++.
 
 ```cpp
 #include <print>
-#include <iostream>
 #include <argvx/parser.hpp>
 
 int main(int argc, char** argv) {
@@ -36,15 +35,18 @@ int main(int argc, char** argv) {
 }
 ```
 
-This project was initially a part of [via-lang](https://github.com/XnLogicaL/via-lang) but was forked off because yeah.
-
 # Installation
 
 Just clone the repository and add `{root}/include` to your include directories.
 
-# Planned
+# Roadmap
 
 - Subcommands
 - Validators
-- CSV values (e.g. `-opt a,b,c`)
-- Option packing (e.g. `-abc <value>` instead of `-a -b -c <value>`)
+- CSV arguments (e.g. `-opt a,b,c`)
+- Packed short options (e.g. `-abc <value>` instead of `-a -b -c <value>`)
+- Quality of life
+
+# Notes
+
+This project was initially a part of [via-lang](https://github.com/XnLogicaL/via-lang), but was forked off because I felt like it.
