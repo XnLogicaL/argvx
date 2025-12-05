@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  arch-test:
+    runs-on: ubuntu-latest
+    container: archlinux:latest
+
+    steps:
+      - name: Install deps
+        run: |
+          pacman -Sy --noconfirm base-devel make gcc
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build tests
+        run: |
+          make -B test
+
+      - name: Run ./test and fail if exit code != 0
+        run: |
+          echo "Running ./test..."
+          set +e
+          ./test
+          if [ $? -ne 0 ]; then
+            echo "test exited with non-zero code ($?)"
+            exit 1
+          fi
