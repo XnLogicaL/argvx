@@ -174,7 +174,7 @@ TEST(error_propagates_from_value_parser) {
 
 int main() {
   if (failures == 0) {
-    std::cout << "[*] all tests passed\n";
+    std::cout << "[+] all tests passed\n";
     return 0;
   }
   std::cout << "[!] " << failures << " tests failed\n";
