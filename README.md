@@ -2,9 +2,11 @@
 
 ## Modern, exception-free, header-only argument parser for C++
 
-<img src="https://img.shields.io/github/license/XnLogicaL/argvx" alt="License">
-<img src="https://img.shields.io/github/languages/top/XnLogicaL/argvx" alt="Top Language">
-<img src="https://github.com/XnLogicaL/argvx/actions/workflows/ci.yml/badge.svg" alt="CI">
+<p align="left">
+  <img src="https://img.shields.io/github/license/XnLogicaL/argvx" alt="License">
+  <img src="https://img.shields.io/github/languages/top/XnLogicaL/argvx" alt="Top Language">
+  <img src="https://github.com/XnLogicaL/argvx/actions/workflows/ci.yml/badge.svg" alt="CI">
+</p>
 
 ```cpp
 int count, coeff;
