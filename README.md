@@ -2,7 +2,7 @@
 
 ## Modern, exception-free, header-only argument parser for C++
 
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+[![CI](https://github.com/XnLogicaL/argvx/actions/workflows/ci.yml/badge.svg)](https://github.com/XnLogicaL/argvx/actions/workflows/ci.yml)
 
 > [!WARNING]
 > This project is still in its early stages.
@@ -31,13 +31,6 @@ Just clone the repository and add `{root}/include` to your include directories.
 
 ## Roadmap
 
-<details>
-  <summary>Legend</summary>
-  🟩 = Released
-  🟨 = In progress
-  🟥 = Planned
-</details>
-
 - 🟨 Core
   - 🟩 Positional arguments
   - 🟥 Subcommands
@@ -51,6 +44,13 @@ Just clone the repository and add `{root}/include` to your include directories.
   - 🟩 Typed value binding
   - 🟥 Validators/policies
   - 🟥 Auto-generated help command
+
+<details>
+  <summary>Legend</summary>
+  - 🟩 = Completed
+  - 🟨 = In progress
+  - 🟥 = Planned
+</details>
 
 ## Notes
 
