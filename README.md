@@ -15,7 +15,7 @@ bool triple = false;
 argvx::parser<> parser(argc, argv);
 parser.positional("count", count).required();
 parser.option({"--coefficient", "-co"}, coeff).required();
-parser.option({"--triple", "-tri"}, triple);
+parser.option({"--triple"}, triple);
 
 if (auto error = parser.parse())
   ...

@@ -15,7 +15,7 @@ namespace argvx {
 namespace detail {
 
 struct option_names {
-  std::string long_name, short_name;
+  std::string long_name{}, short_name{};
 
   inline bool one_defined() {
     return !(long_name.empty() && short_name.empty());
