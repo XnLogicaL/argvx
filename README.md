@@ -2,6 +2,8 @@
 
 ## Modern, exception-free, header-only argument parser for C++
 
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
 > [!WARNING]
 > This project is still in its early stages.
 > The foundation is solid, but more features are planned.
@@ -29,11 +31,12 @@ Just clone the repository and add `{root}/include` to your include directories.
 
 ## Roadmap
 
-### Legend
-
-🟩 = Released
-🟨 = In progress
-🟥 = Planned
+<details>
+  <summary>Legend</summary>
+  🟩 = Released
+  🟨 = In progress
+  🟥 = Planned
+</details>
 
 - 🟨 Core
   - 🟩 Positional arguments
