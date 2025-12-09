@@ -1,52 +1,54 @@
 # argvx
 
+## Modern, exception-free, header-only argument parser for C++
+
 > [!WARNING]
 > This project is still in its early stages.
 > The foundation is solid, but more features are planned.
 
-argvx (argv eXtended) is a modern, exception-free, header-only argument parser for C++.
-
 ```cpp
-#include <print>
-#include <argvx/parser.hpp>
+int count, coeff;
+bool triple = false;
 
-int main(int argc, char** argv) {
-  int count = 0;
-  bool triple = false;
+argvx::parser<> parser(argc, argv);
+parser.positional("count", count).required();
+parser.option({"--coefficient", "-co"}, coeff).required();
+parser.option({"--triple", "-tri"}, triple);
 
-  argvx::parser<> parser(argc, argv);
-  parser.positional("count", count)
-    .required();
-    .help("just an arbitrary number");
-
-  parser.option({"triple", "tri"}, triple)
-    .help("triple the <count> argument");
-
-  if (auto error = parser.parse()) {
-    std::println(std::cerr, "error: {}", *error);
-    return 1;
-  }
-
-  if (triple)
-    count *= 3;
-
-  std::println("count: {}", count);
-  return 0;
-}
+if (auto error = parser.parse())
+  ...
 ```
 
-# Installation
+### Why yet another parser?
+
+There are other great parsers for C++ out there- but all of them had cons that were deal-breakers for me; annoying licenses, lack of QoL/utilities, bad ergonomics, exception-oriented design, etc... So I decided to make my own and publicize it, in the hopes that someone may find it useful. It does **not** aim to replace anyone or anything.
+
+## Installation
 
 Just clone the repository and add `{root}/include` to your include directories.
 
-# Roadmap
+## Roadmap
 
-- Subcommands
-- Validators
-- CSV arguments (e.g. `-opt a,b,c`)
-- Packed short options (e.g. `-abc <value>` instead of `-a -b -c <value>`)
-- Quality of life
+### Legend
 
-# Notes
+🟩 = Released
+🟨 = In progress
+🟥 = Planned
+
+- 🟨 Core
+  - 🟩 Positional arguments
+  - 🟥 Subcommands
+  - 🟩 Long & short options
+  - 🟩 Basic values (bool, int, uint, float, string, path)
+- 🟥 Extra
+  - 🟥 Packed options (e.g. `-abc <value>` instead of `-a -b -c <value>`)
+  - 🟥 Comma-seperated values (e.g. `-opt a,b,c`)
+  - 🟥 IO values (e.g. `--` for stdout)
+- 🟨 Ergonomics
+  - 🟩 Typed value binding
+  - 🟥 Validators/policies
+  - 🟥 Auto-generated help command
+
+## Notes
 
 This project was initially a part of [via-lang](https://github.com/XnLogicaL/via-lang), but was forked off because I felt like it.
