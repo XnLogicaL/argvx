@@ -2,11 +2,9 @@
 
 ## Modern, exception-free, header-only argument parser for C++
 
-[![CI | Linux](https://github.com/XnLogicaL/argvx/actions/workflows/ci.yml/badge.svg)](https://github.com/XnLogicaL/argvx/actions/workflows/ci.yml)
-
-> [!WARNING]
-> This project is still in its early stages.
-> The foundation is solid, but more features are planned.
+<img src="https://img.shields.io/github/license/XnLogicaL/argvx" alt="License">
+<img src="https://img.shields.io/github/languages/top/XnLogicaL/argvx" alt="Top Language">
+<img src="https://github.com/XnLogicaL/argvx/actions/workflows/ci.yml/badge.svg" alt="CI">
 
 ```cpp
 int count, coeff;
@@ -20,6 +18,10 @@ parser.option({"--triple", "-tri"}, triple);
 if (auto error = parser.parse())
   ...
 ```
+
+> [!WARNING]
+> This project is still in its early stages.
+> The foundation is solid, but more features are planned.
 
 ### Why yet another parser?
 
