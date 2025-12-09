@@ -1,8 +1,8 @@
 # argvx
 
-## Modern, exception-free, header-only argument parser for C++
-
 [![CI](https://github.com/XnLogicaL/argvx/actions/workflows/ci.yml/badge.svg)](https://github.com/XnLogicaL/argvx/actions/workflows/ci.yml)
+
+## Modern, exception-free, header-only argument parser for C++
 
 > [!WARNING]
 > This project is still in its early stages.
