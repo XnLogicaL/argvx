@@ -1,4 +1,4 @@
-#include <argvx/paser.hpp>
+#include <argvx/parser.hpp>
 #include <filesystem>
 #include <iostream>
 #include <string>
